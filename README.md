@@ -31,6 +31,21 @@ return ogg file in body
 | 5 | 鞍馬小春 |
 | 6 | 在原七海 |
 
+> Hiyori + Kano + Asumi + Sio + Ameri + Miri + Hiromu + Ririko
+
+replace`speak`to`speak2`
+
+|  ID   | Speaker  |
+|  ----  | ----  |
+| 0 | 和泉妃愛 |
+| 1 | 常盤華乃 |
+| 2 | 錦あすみ |
+| 3 | 鎌倉詩桜 |
+| 4 | 竜閑天梨 |
+| 5 | 和泉里 |
+| 6 | 新川広夢 |
+| 7 | 聖莉々子 |
+
 ## Korean
 
 > Sua + Mimiru + Arin + Yeonhwa + Yuhwa + Seonbae
