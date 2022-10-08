@@ -16,10 +16,8 @@ def text_to_sequence(text, cleaner_names):
     Returns:
       List of integers corresponding to the symbols in the text
   '''
-  sequence = []
-
-  clean_text = _clean_text(text, cleaner_names)
-  return cleaned_text_to_sequence(clean_text)
+  if cleaner_names is not None: text = _clean_text(text, cleaner_names)
+  return cleaned_text_to_sequence(text)
 
 
 def cleaned_text_to_sequence(cleaned_text):
@@ -35,23 +33,11 @@ def cleaned_text_to_sequence(cleaned_text):
       sequence.append(_symbol_to_id[symbol])
     else:
       for s in symbol:
-        try:
-            sequence.append(_symbol_to_id[s])
-        except:
-            sequence.append(_symbol_to_id['，'])
+        sequence.append(_symbol_to_id[s])
     sequence.append(_symbol_to_id[" "])
   if sequence[-1] == _symbol_to_id[" "]:
     sequence = sequence[:-1]
   return sequence
-
-
-def sequence_to_text(sequence):
-  '''Converts a sequence of IDs back to a string'''
-  result = ''
-  for symbol_id in sequence:
-    s = _id_to_symbol[symbol_id]
-    result += s
-  return result
 
 
 def _clean_text(text, cleaner_names):

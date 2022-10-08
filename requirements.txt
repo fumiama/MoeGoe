@@ -4,11 +4,15 @@
 
 azure-functions
 
-numpy==1.22.4
+numpy
 numba
 scipy
 Unidecode
-torch==1.13.1
 pypinyin
-jieba
 pypinyin_dict
+jieba
+phonemizer
+jamo
+av
+-f https://download.pytorch.org/whl/torch_stable.html
+torch==1.12.0+cpu

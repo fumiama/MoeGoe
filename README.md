@@ -1,80 +1,214 @@
 # MoeGoe Azure Cloud Function API
 See [MoeGoe](https://github.com/CjangCjengh/MoeGoe)
 
-## Japanese
+See [原神VITS](https://github.com/Stardust-minus/vits)
+
+## Chinese
 
 > Nene + Meguru + Yoshino + Mako + Murasame + Koharu + Nanami
 
-- GET https://moegoe.azurewebsites.net/api/speak?text=これは一つ簡単なテストです&id=0
+- GET https://genshin.azurewebsites.net/api/speak?text=欲买桂花同载酒&id=0
+
+- GET https://genshin.azurewebsites.net/api/speak?text=欲买桂花同载酒&name=空
 
 return ogg file in body
 
-- GET https://moegoe.azurewebsites.net/api/clean?text=これは一つ簡単なテストです
+- GET https://genshin.azurewebsites.net/api/clean?text=欲买桂花同载酒
 
 return cleaned text in body
 
 ```
-ko↑rewa hI↑to↓tsU ka↑NtaNna te↓sUtodesU.
+ü4 m ai3 g uei4 h ua1 t ong2 z ai4 j iou3
 ```
 
-- GET https://moegoe.azurewebsites.net/api/speak?cleantext=ko↑rewahI↑totsUka↑NtaNnate↓sUtodesU.&id=1
+- GET https://genshin.azurewebsites.net/api/speak?cleantext=ü4%20m%20ai3%20g%20uei4%20h%20ua1%20t%20ong2%20z%20ai4%20j%20iou3&id=1
+
+- GET https://genshin.azurewebsites.net/api/speak?cleantext=ü4%20m%20ai3%20g%20uei4%20h%20ua1%20t%20ong2%20z%20ai4%20j%20iou3&name=空
 
 return ogg file in body
 
 |  ID   | Speaker  |
 |  ----  | ----  |
-| 0 | 綾地寧々 |
-| 1 | 因幡めぐる |
-| 2 | 朝武芳乃 |
-| 3 | 常陸茉子 |
-| 4 | ムラサメ |
-| 5 | 鞍馬小春 |
-| 6 | 在原七海 |
-
-> HamidashiCreative
-
-replace`speak`to`speak2`
-
-|  ID   | Speaker  |
-|  ----  | ----  |
-| 0 | 和泉妃愛 |
-| 1 | 常盤華乃 |
-| 2 | 錦あすみ |
-| 3 | 鎌倉詩桜 |
-| 4 | 竜閑天梨 |
-| 5 | 和泉里 |
-| 6 | 新川広夢 |
-| 7 | 聖莉々子 |
-
-
-## Korean
-
-> Sua + Mimiru + Arin + Yeonhwa + Yuhwa + Seonbae
-
-- GET https://moegoe.azurewebsites.net/api/speakkr?text=이것은%20간단한%20테스트이다&id=0
-
-return ogg file in body
-
-- GET https://moegoe.azurewebsites.net/api/cleankr?text=이것은%20간단한%20테스트이다
-
-return cleaned text in body
-
-```
-ㅇㅣㄱㅓㅅㅇㅡㄴ ㄱㅏㄴㄷㅏㄴㅎㅏㄴ ㅌㅔㅅㅡㅌㅡㅇㅣㄷㅏ.
-```
-
-- GET https://moegoe.azurewebsites.net/api/speakkr?cleantext=ㅇㅣㄱㅓㅅㅇㅡㄴ%20ㄱㅏㄴㄷㅏㄴㅎㅏㄴ%20ㅌㅔㅅㅡㅌㅡㅇㅣㄷㅏ.&id=1
-
-return ogg file in body
-
-|  ID   | Speaker  |
-|  ----  | ----  |
-| 0 | 수아 |
-| 1 | 미미르 |
-| 2 | 아린 |
-| 3 | 연화 |
-| 4 | 유화 |
-| 5 | 선배 |
+| 0 | 空 |
+| 1 | 荧 |
+| 2 | 派蒙 |
+| 3 | 纳西妲 |
+| 4 | 阿贝多 |
+| 5 | 温迪 |
+| 6 | 枫原万叶 |
+| 7 | 钟离 |
+| 8 | 荒泷一斗 |
+| 9 | 八重神子 |
+| 10 | 艾尔海森 |
+| 11 | 提纳里 |
+| 12 | 迪希雅 |
+| 13 | 卡维 |
+| 14 | 宵宫 |
+| 15 | 莱依拉 |
+| 16 | 赛诺 |
+| 17 | 诺艾尔 |
+| 18 | 托马 |
+| 19 | 凝光 |
+| 20 | 莫娜 |
+| 21 | 北斗 |
+| 22 | 神里绫华 |
+| 23 | 雷电将军 |
+| 24 | 芭芭拉 |
+| 25 | 鹿野院平藏 |
+| 26 | 五郎 |
+| 27 | 迪奥娜 |
+| 28 | 凯亚 |
+| 29 | 安柏 |
+| 30 | 班尼特 |
+| 31 | 琴 |
+| 32 | 柯莱 |
+| 33 | 夜兰 |
+| 34 | 妮露 |
+| 35 | 辛焱 |
+| 36 | 珐露珊 |
+| 37 | 魈 |
+| 38 | 香菱 |
+| 39 | 达达利亚 |
+| 40 | 砂糖 |
+| 41 | 早柚 |
+| 42 | 云堇 |
+| 43 | 刻晴 |
+| 44 | 丽莎 |
+| 45 | 迪卢克 |
+| 46 | 烟绯 |
+| 47 | 重云 |
+| 48 | 珊瑚宫心海 |
+| 49 | 胡桃 |
+| 50 | 可莉 |
+| 51 | 流浪者 |
+| 52 | 久岐忍 |
+| 53 | 神里绫人 |
+| 54 | 甘雨 |
+| 55 | 戴因斯雷布 |
+| 56 | 优菈 |
+| 57 | 菲谢尔 |
+| 58 | 行秋 |
+| 59 | 白术 |
+| 60 | 九条裟罗 |
+| 61 | 雷泽 |
+| 62 | 申鹤 |
+| 63 | 迪娜泽黛 |
+| 64 | 凯瑟琳 |
+| 65 | 多莉 |
+| 66 | 坎蒂丝 |
+| 67 | 萍姥姥 |
+| 68 | 罗莎莉亚 |
+| 69 | 留云借风真君 |
+| 70 | 绮良良 |
+| 71 | 瑶瑶 |
+| 72 | 七七 |
+| 73 | 奥兹 |
+| 74 | 米卡 |
+| 75 | 夏洛蒂 |
+| 76 | 埃洛伊 |
+| 77 | 博士 |
+| 78 | 女士 |
+| 79 | 大慈树王 |
+| 80 | 三月七 |
+| 81 | 娜塔莎 |
+| 82 | 希露瓦 |
+| 83 | 虎克 |
+| 84 | 克拉拉 |
+| 85 | 丹恒 |
+| 86 | 希儿 |
+| 87 | 布洛妮娅 |
+| 88 | 瓦尔特 |
+| 89 | 杰帕德 |
+| 90 | 佩拉 |
+| 91 | 姬子 |
+| 92 | 艾丝妲 |
+| 93 | 白露 |
+| 94 | 星 |
+| 95 | 穹 |
+| 96 | 桑博 |
+| 97 | 伦纳德 |
+| 98 | 停云 |
+| 99 | 罗刹 |
+| 100 | 卡芙卡 |
+| 101 | 彦卿 |
+| 102 | 史瓦罗 |
+| 103 | 螺丝咕姆 |
+| 104 | 阿兰 |
+| 105 | 银狼 |
+| 106 | 素裳 |
+| 107 | 丹枢 |
+| 108 | 黑塔 |
+| 109 | 景元 |
+| 110 | 帕姆 |
+| 111 | 可可利亚 |
+| 112 | 半夏 |
+| 113 | 符玄 |
+| 114 | 公输师傅 |
+| 115 | 奥列格 |
+| 116 | 青雀 |
+| 117 | 大毫 |
+| 118 | 青镞 |
+| 119 | 费斯曼 |
+| 120 | 绿芙蓉 |
+| 121 | 镜流 |
+| 122 | 信使 |
+| 123 | 丽塔 |
+| 124 | 失落迷迭 |
+| 125 | 缭乱星棘 |
+| 126 | 伊甸 |
+| 127 | 伏特加女孩 |
+| 128 | 狂热蓝调 |
+| 129 | 莉莉娅 |
+| 130 | 萝莎莉娅 |
+| 131 | 八重樱 |
+| 132 | 八重霞 |
+| 133 | 卡莲 |
+| 134 | 第六夜想曲 |
+| 135 | 卡萝尔 |
+| 136 | 姬子 |
+| 137 | 极地战刃 |
+| 138 | 布洛妮娅 |
+| 139 | 次生银翼 |
+| 140 | 理之律者 |
+| 141 | 真理之律者 |
+| 142 | 迷城骇兔 |
+| 143 | 希儿 |
+| 144 | 魇夜星渊 |
+| 145 | 黑希儿 |
+| 146 | 帕朵菲莉丝 |
+| 147 | 天元骑英 |
+| 148 | 幽兰黛尔 |
+| 149 | 德丽莎 |
+| 150 | 月下初拥 |
+| 151 | 朔夜观星 |
+| 152 | 暮光骑士 |
+| 153 | 明日香 |
+| 154 | 李素裳 |
+| 155 | 格蕾修 |
+| 156 | 梅比乌斯 |
+| 157 | 渡鸦 |
+| 158 | 人之律者 |
+| 159 | 爱莉希雅 |
+| 160 | 爱衣 |
+| 161 | 天穹游侠 |
+| 162 | 琪亚娜 |
+| 163 | 空之律者 |
+| 164 | 终焉之律者 |
+| 165 | 薪炎之律者 |
+| 166 | 云墨丹心 |
+| 167 | 符华 |
+| 168 | 识之律者 |
+| 169 | 维尔薇 |
+| 170 | 始源之律者 |
+| 171 | 芽衣 |
+| 172 | 雷之律者 |
+| 173 | 苏莎娜 |
+| 174 | 阿波尼亚 |
+| 175 | 陆景和 |
+| 176 | 莫弈 |
+| 177 | 夏彦 |
+| 178 | 左然 |
+| 179 | 标贝 |
 
 ## Optional Parameters
 

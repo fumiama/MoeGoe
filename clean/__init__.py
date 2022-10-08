@@ -3,7 +3,7 @@ import azure.functions as func
 from api import Cleaner
 
 
-cleaner = Cleaner('genshin_xm37.config')
+cleaner = Cleaner('genshin.json')
 
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
