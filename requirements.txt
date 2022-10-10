@@ -9,7 +9,6 @@ numba
 scipy
 Unidecode
 pypinyin
-pypinyin_dict
 jieba
 phonemizer
 av
