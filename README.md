@@ -5,7 +5,7 @@ See [原神VITS](https://github.com/Stardust-minus/vits)
 
 ## Chinese
 
-> Nene + Meguru + Yoshino + Mako + Murasame + Koharu + Nanami
+> 53 GenShin Characters
 
 - GET https://genshin.azurewebsites.net/api/speak?text=欲买桂花同载酒&id=0
 
