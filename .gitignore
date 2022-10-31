@@ -369,14 +369,6 @@ monotonic_align/core.c
 *.so
 *.dll
 
-# data
-/config.json
-/*.pth
-/confignenia.json
-/configsuae.json
-/confighiyori.json
-*.wav
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -514,3 +506,6 @@ __azurite_db*__.json
 .python_packages
 
 .DS_Store
+
+*.pth
+config.json

@@ -3,7 +3,7 @@ import azure.functions as func
 from api import Cleaner
 
 
-cleaner = Cleaner('confignenia.json')
+cleaner = Cleaner('Yuzu/config.json')
 
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
