@@ -48,7 +48,7 @@ replace`speak`to`speak2`
 
 > DRACU-RIOT!
 
-replace`speak`to`speakdr`
+replace`speak`to`speak3`
 
 |  ID   | Speaker  |
 |  ----  | ----  |
