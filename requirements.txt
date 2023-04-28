@@ -8,7 +8,7 @@ numpy==1.22.4
 numba
 scipy
 Unidecode
-openjtalk>=0.3.0.dev2
+openjtalk==0.3.0.dev2
 jamo
 av
 -f https://download.pytorch.org/whl/torch_stable.html
