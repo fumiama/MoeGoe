@@ -65,6 +65,6 @@ jobs:
           app-name: 'genshin-api'
           slot-name: 'Production'
           package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_730FDD3761BD4F1E8126A89B59EBCB27 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2E2789F270594F3EBC410C69B2198935 }}
           scm-do-build-during-deployment: true
           enable-oryx-build: true
