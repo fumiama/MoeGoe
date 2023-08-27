@@ -8,6 +8,7 @@ import commons
 from utils import load_checkpoint, get_hparams_from_file, wav2
 from models import SynthesizerTrn
 from text import text_to_sequence, _clean_text
+from text.symbols import symbols
 from urllib.parse import unquote
 
 from scipy.io.wavfile import write
@@ -40,7 +41,7 @@ class Speaker():
     def __init__(self, configfile: str, pthfile: str):
         self.hps_ms = get_hparams_from_file(str(Path(__file__).parent/configfile))
         self.net_g_ms = SynthesizerTrn(
-            len(self.hps_ms.symbols),
+            len(symbols),
             self.hps_ms.data.filter_length // 2 + 1,
             self.hps_ms.train.segment_size // self.hps_ms.data.hop_length,
             n_speakers=self.hps_ms.data.n_speakers,
@@ -50,9 +51,9 @@ class Speaker():
 
     def get_text(self, text: str, cleaned=False):
         if cleaned:
-            text_norm = text_to_sequence(text, self.hps_ms.symbols, [])
+            text_norm = text_to_sequence(text, None)
         else:
-            text_norm = text_to_sequence(text, self.hps_ms.symbols, self.hps_ms.data.text_cleaners)
+            text_norm = text_to_sequence(text, self.hps_ms.data.text_cleaners)
         if self.hps_ms.data.add_blank:
             text_norm = commons.intersperse(text_norm, 0)
         text_norm = LongTensor(text_norm)
