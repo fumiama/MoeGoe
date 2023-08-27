@@ -214,3 +214,6 @@ return ogg file in body
 
 ### speak
 - **format**: ogg(default), mp3 or wav
+- **noise**: noise_scale in infer
+- **noisew**: noise_scale_w in infer
+- **length**: length_scale in infer

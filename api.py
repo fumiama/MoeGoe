@@ -104,6 +104,39 @@ class Speaker():
                 "400 BAD REQUEST: invalid format",
                 status_code=400
             )
+        noise = req.params.get('noise')
+        if not noise: noise = 0.5
+        else:
+            try:
+                noise = float(noise)
+                if noise < 0.1 or noise > 2.0: raise Exception("invalid noise")
+            except:
+                return func.HttpResponse(
+                    "400 BAD REQUEST: invalid noise",
+                    status_code=400
+                )
+        noisew = req.params.get('noisew')
+        if not noisew: noisew = 0.6
+        else:
+            try:
+                noisew = float(noisew)
+                if noisew < 0.1 or noisew > 2.0: raise Exception("invalid noisew")
+            except:
+                return func.HttpResponse(
+                    "400 BAD REQUEST: invalid noisew",
+                    status_code=400
+                )
+        length = req.params.get('length')
+        if not length: length = 1.3
+        else:
+            try:
+                length = float(length)
+                if length < 0.3 or length > 2.0: raise Exception("invalid length")
+            except:
+                return func.HttpResponse(
+                    "400 BAD REQUEST: invalid length",
+                    status_code=400
+                )
         try:
             stn_tst = self.get_text(unquote(text), cleaned)
         except:
@@ -116,7 +149,10 @@ class Speaker():
                 x_tst = stn_tst.unsqueeze(0)
                 x_tst_lengths = LongTensor([stn_tst.size(0)])
                 sid = LongTensor([speaker_id])
-                audio = self.net_g_ms.infer(x_tst, x_tst_lengths, sid=sid, noise_scale=.5, noise_scale_w=0.6, length_scale=1.3)[0][0,0].data.cpu().float().numpy()
+                audio = self.net_g_ms.infer(
+                    x_tst, x_tst_lengths, sid=sid,
+                    noise_scale=noise, noise_scale_w=noisew, length_scale=length
+                )[0][0,0].data.cpu().float().numpy()
                 with BytesIO() as f:
                     write(f, self.hps_ms.data.sampling_rate, audio)
                     if format == "wav":

@@ -15,7 +15,7 @@ hyperparameter. Some cleaners are English-specific. You'll typically want to use
 import re
 from unidecode import unidecode
 from phonemizer import phonemize
-from pypinyin import pinyin, lazy_pinyin, load_phrases_dict, Style, load_single_dict
+from pypinyin import pinyin, load_phrases_dict, Style
 from pypinyin.style._utils import get_finals, get_initials
 from pypinyin_dict.phrase_pinyin_data import cc_cedict
 from pypinyin_dict.pinyin_data import kmandarin_8105
@@ -90,10 +90,6 @@ def expand_abbreviations(text):
   for regex, replacement in _abbreviations:
     text = re.sub(regex, replacement, text)
   return text
-
-
-def expand_numbers(text):
-  return normalize_numbers(text)
 
 
 def lowercase(text):
