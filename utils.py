@@ -45,19 +45,18 @@ def load_checkpoint(checkpoint_path, model):
     state_dict = model.module.state_dict()
   else:
     state_dict = model.state_dict()
-  new_state_dict= {}
   for k, v in state_dict.items():
-    try:
-      new_state_dict[k] = saved_state_dict[k]
-    except:
+    if k not in saved_state_dict:
       logging.info("%s is not in the checkpoint" % k)
-      new_state_dict[k] = v
+      saved_state_dict[k] = v
+  del state_dict
   if hasattr(model, 'module'):
-    model.module.load_state_dict(new_state_dict)
+    model.module.load_state_dict(saved_state_dict)
   else:
-    model.load_state_dict(new_state_dict)
+    model.load_state_dict(saved_state_dict)
   logging.info("Loaded checkpoint '{}' (iteration {})" .format(
     checkpoint_path, iteration))
+  del saved_state_dict, checkpoint_dict
   return
 
 
